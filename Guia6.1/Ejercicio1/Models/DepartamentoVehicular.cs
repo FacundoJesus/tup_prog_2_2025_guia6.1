@@ -25,14 +25,9 @@ namespace Ejercicio1.Models
 
         public RegistroVehiculo RegistrarVehiculo(Persona propietario, string patente)
         {
-            RegistroVehiculo nuevoRegistro = null;
-            nuevoRegistro = new RegistroVehiculo(patente, propietario, serie++);
-            if(nuevoRegistro != null)
-            {
-                registros.Add(nuevoRegistro);
-                OrdenarVehiculosPorPatente();
-                return nuevoRegistro;
-            }
+            RegistroVehiculo nuevoRegistro = new RegistroVehiculo(patente, propietario, serie++);
+            registros.Add(nuevoRegistro);
+            OrdenarVehiculosPorPatente();
             return nuevoRegistro;
         }
 
